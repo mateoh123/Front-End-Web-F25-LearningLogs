@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.Containers {
+  display: flex;
+  height: 100vh;
+}
+
+.categoriesBar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgb(193, 193, 193);
+  gap: 2rem;
+}
+
+.recentsBar {
+}
+
+.searchBar {
+  background-color: rgb(180, 142, 188);
+  width: 100vw;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0px;
+}
+
+input {
+  width: 30%;
+}
+
+.postsContainer {
+  padding: 1rem;
+  margin: 0px;
+}
+
+.postssubContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+.postInformation {
+  border: 5px solid rgb(116, 72, 170);
+  background-color: rgb(216, 171, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  padding-bottom: 1rem;
+}
