@@ -1,0 +1,62 @@
+<a href="./week8.html">E--- Go Back</a>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 8 Exercise</title>
+  </head>
+  <body>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+    <p>baka</p>
+
+    <div id="container1">
+      <p>Hi</p>
+      <p>Hi</p>
+      <p>Hi</p>
+    </div>
+
+    <div id="container2">
+      <p>UwU</p>
+      <p>UwU</p>
+    </div>
+
+    <button onclick="countParagraphs()">Count Paragraphs</button>
+    <button onclick="countContainer1()">Count Elements in #container1</button>
+    <button onclick="countContainer2()">Count Elements in #container2</button>
+
+    <div id="output1"></div>
+    <div id="output2"></div>
+    <div id="output3"></div>
+
+    <script>
+      function countParagraphs() {
+        const paragraphs = document.getElementsByTagName("p").length;
+        document.getElementById(
+          "output1"
+        ).innerText = `There are ${paragraphs} paragraph tags on this page.`;
+      }
+
+      function countContainer1() {
+        const count = document.getElementById("container1").children.length;
+        document.getElementById(
+          "output2"
+        ).innerText = `Container 1 contains ${count} elements.`;
+      }
+
+      function countContainer2() {
+        const count = document.getElementById("container2").children.length;
+        document.getElementById(
+          "output3"
+        ).innerText = `Container 2 contains ${count} elements.`;
+      }
+    </script>
+  </body>
+</html>

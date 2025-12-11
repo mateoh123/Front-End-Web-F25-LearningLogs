@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Week 9 Exercise</title>
+  </head>
+  <body>
+    <a href="./week9.html">E--- Go Back</a>
+    <h1>What Should You Do Today?!</h1>
+    <h4>!The Magnificent Website Will Tell You!</h4>
+    <input id="myInput" type="text" />
+    <button id="executeButton">Let The Website Predict!</button>
+
+    <div id="outputContainer">
+      <p id="outputText">What Will It Be?</p>
+    </div>
+
+    <script>
+      let executeButton = document.getElementById("executeButton");
+      let outputParagraph = document.getElementById("outputText");
+      let inputElement = document.getElementById("myInput");
+
+      let activites = [
+        "eat",
+        "sleep",
+        "pray on someones downfall",
+        "meditate",
+        "hold space for the lyrics of Defying Gravity",
+        "hold someones finger",
+        "listen to music",
+        "do your homework",
+        "do someone elses homework",
+      ];
+
+      executeButton.addEventListener("click", function () {
+        var currentInputText = inputElement.value;
+        generate(currentInputText);
+        restyle();
+      });
+
+      function generate(incUserInput) {
+        var randomIndex = Math.floor(Math.random() * activites.length);
+        var selectedRandonTimeText = activites[randomIndex];
+        outputParagraph.innerText =
+          incUserInput + " is going to " + selectedRandonTimeText + " today!";
+      }
+
+      function restyle() {
+        var randColor = Math.random() * 255;
+        var randR = Math.random() * 255;
+        var randG = Math.random() * 255;
+        var randB = Math.random() * 255;
+        var randSize = Math.random() * 255;
+        var randOutputColor =
+          "rgb(" + randColor + "," + randColor + "," + randColor + ")";
+        var randOutputColorV2 =
+          "rgb(" + randR + "," + randG + "," + randB + ")";
+        outputParagraph.style.color = randOutputColor;
+        outputParagraph.style.backgroundColor = randOutputColorV2;
+        outputParagraph.style.fontSize = randSize + "px";
+      }
+    </script>
+    <style>
+      h1 {
+        text-align: center;
+        color: #ffffff;
+      }
+
+      h4 {
+        text-align: center;
+        color: aqua;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      input {
+        align-items: center;
+      }
+    </style>
+  </body>
+</html>
